@@ -1,0 +1,112 @@
+{% extends "base.html" %} {%block head%}
+<style>
+  body {
+    background-image: url("C:/Users/abmay/Desktop/New folder/static/images/bg_2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+.example1 {
+ height: 50px;	
+ overflow: hidden;
+ position: relative;
+}
+.example1 h3 {
+ font-size: 3em;
+ color: rgb(241, 217, 195);
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);	
+ transform:translateX(100%);
+ /* Apply animation to this element */	
+ -moz-animation: example1 15s linear infinite;
+ -webkit-animation: example1 15s linear infinite;
+ animation: example1 15s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes example1 {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes example1 {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes example1 {
+ 0%   { 
+ -moz-transform: translateX(100%); /* Firefox bug fix */
+ -webkit-transform: translateX(100%); /* Firefox bug fix */
+ transform: translateX(100%); 		
+ }
+ 100% { 
+ -moz-transform: translateX(-100%); /* Firefox bug fix */
+ -webkit-transform: translateX(-100%); /* Firefox bug fix */
+ transform: translateX(-100%); 
+ }
+}
+
+</style>
+
+{%endblock%} {%block title%} Home page {%endblock%} {%block body%}
+<div class="example1">
+  <h3>Welcome to Malaria predictor </h3>
+  </div>
+<div class="container">
+  
+  <div class="row" style="margin-top: 13vh">
+    
+      <div class="col-4" >
+      
+      
+
+      <div class="card bg-dark border-white" style="width: 24rem;">
+        
+        <div class="card-body">
+          <h5 class="card-title text-warning">About project</h5>
+          <p class="card-text text-white">Our model predicts Malaria based on Blood Cells.
+            our model was trained using over 13000 images.Our model made use of Convolution neural networks 
+            which enhanced accuracy of our model exceeding the previously trained model like VGG19 and ResNet
+            Our model gave 95% accuracy,So feel free and confident to use this model!
+          </p>
+          <a href="#" class="btn btn-primary">More..</a>
+        </div>
+      </div>
+    
+    </div>
+    <div class="col-3"></div>
+    <div
+      class="col-5"
+      style="
+        color: white;
+        
+      "
+    >
+      <div class="card bg-dark border-white" style="width: 30rem;">
+        
+        <div class="card-body">
+          <h5 class="card-title text-warning">Well Malaria can be,</h5>
+          <p class="card-text text-white">
+            Malaria is a life-threatening disease caused by parasites that are transmitted to people through the bites of infected female Anopheles mosquitoes. It is preventable and curable.
+            In 2019, there were an estimated 229 million cases of malaria worldwide.
+            The estimated number of malaria deaths stood at 409 000 in 2019.
+            Children aged under 5 years are the most vulnerable group affected by malaria; in 2019, they accounted for 67% (274 000) of all malaria deaths worldwide.
+            The WHO African Region carries a disproportionately high share of the global malaria burden. In 2019, the region was home to 94% of malaria cases and deaths.</p>
+            <br>
+          <a href="#" class="btn btn-primary">More..</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" ">
+    
+    <div class="col"></div>
+  </div>
+</div>
+
+{%endblock%}
